@@ -1,6 +1,6 @@
 /* ============================================
    EQUILIBRIO FEM - STYLES
-   Paleta: Pinkie (#FCBDD7, #EFA3C7, #FBDAE5, #96989A, #E0E0E0, #050505)
+   Paleta Pinkie: #FCBDD7, #EFA3C7, #FBDAE5, #96989A, #E0E0E0, #050505
    ============================================ */
 
 /* VARIABLES */
@@ -664,6 +664,57 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
+.infographic-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    box-shadow: 0 5px 20px rgba(239, 163, 199, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.infographic-card:hover .infographic-img {
+    transform: scale(1.02);
+}
+
+.infographic-info {
+    background: var(--pink-light);
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    text-align: left;
+    font-size: 0.9rem;
+    color: var(--black);
+}
+
+.infographic-info p {
+    margin-bottom: 0.5rem;
+    color: var(--black);
+}
+
+.infographic-info strong {
+    color: var(--pink-dark);
+}
+
+.infographic-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.infographic-info ul li {
+    padding: 0.3rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.infographic-info ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--pink-dark);
+    font-weight: bold;
+}
+
 .info-image {
     font-size: 4rem;
     margin-bottom: 1rem;
@@ -1002,6 +1053,11 @@ body {
     border-top: 1px solid #333;
     color: var(--gray-medium);
     font-size: 0.9rem;
+}
+
+.footer-credits {
+    margin-top: 0.5rem;
+    font-style: italic;
 }
 
 /* RESPONSIVE */
