@@ -1,5 +1,8 @@
 // ============================================
 // EQUILIBRIO FEM - JAVASCRIPT
+// Proyecto: Universidad Santa María - Diagramación
+// Integrantes: Jenny Aldana, Marianella Angarita, Mariangela Velasco
+// Docente: Edgar Cárdenas | 5to Semestre - Sección A
 // ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,16 +11,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
     
-    menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-    });
-    
-    // Cerrar menú al hacer clic en un enlace
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
         });
-    });
+        
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    }
     
     // ===== NAVEGACIÓN ACTIVA AL SCROLL =====
     const sections = document.querySelectorAll('section[id]');
@@ -50,26 +55,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatMessages = document.getElementById('chatMessages');
     const chatBadge = document.querySelector('.chat-badge');
     
-    // Abrir/cerrar chat
-    chatToggle.addEventListener('click', () => {
-        chatWindow.classList.toggle('active');
-        if (chatWindow.classList.contains('active')) {
-            chatBadge.style.display = 'none';
-        }
-    });
+    if (chatToggle && chatWindow) {
+        // Abrir/cerrar chat
+        chatToggle.addEventListener('click', () => {
+            chatWindow.classList.toggle('active');
+            if (chatWindow.classList.contains('active') && chatBadge) {
+                chatBadge.style.display = 'none';
+            }
+        });
+    }
     
-    chatClose.addEventListener('click', () => {
-        chatWindow.classList.remove('active');
-    });
+    if (chatClose) {
+        chatClose.addEventListener('click', () => {
+            chatWindow.classList.remove('active');
+        });
+    }
     
     // Respuestas automáticas del bot
     const botResponses = {
         'hola': '¡Hola! 💕 ¿Cómo te sientes hoy?',
         'ansiedad': 'Entiendo. La ansiedad es más común de lo que crees. Te recomiendo visitar nuestra sección "Explora tu mente" para aprender técnicas de respiración. 🌸',
         'triste': 'Lamento que te sientas así. Recuerda que está bien no estar bien. ¿Quieres que te comparta algunas líneas de ayuda? 💚',
-        'ayuda': 'Claro! En "Aquí te ayudamos" encontrarás recursos descargables y contactos de profesionales. ',
+        'ayuda': '¡Claro! En "Aquí te ayudamos" encontrarás recursos descargables y contactos de profesionales. 🤝',
         'gracias': '¡De nada! Estamos aquí para ti siempre. 💕',
-        'default': 'Gracias por escribirnos. Una de nosotras te responderá pronto. Mientras tanto, explora nuestras secciones. '
+        'default': 'Gracias por escribirnos. Una de nosotras te responderá pronto. Mientras tanto, explora nuestras secciones. 🌸'
     };
     
     function getBotResponse(message) {
@@ -90,29 +99,33 @@ document.addEventListener('DOMContentLoaded', () => {
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
     
-    chatForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const message = chatInput.value.trim();
-        if (message) {
-            addMessage(message, 'user');
-            chatInput.value = '';
-            
-            // Simular respuesta del bot
-            setTimeout(() => {
-                const response = getBotResponse(message);
-                addMessage(response, 'bot');
-            }, 1000);
-        }
-    });
+    if (chatForm) {
+        chatForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const message = chatInput.value.trim();
+            if (message) {
+                addMessage(message, 'user');
+                chatInput.value = '';
+                
+                // Simular respuesta del bot
+                setTimeout(() => {
+                    const response = getBotResponse(message);
+                    addMessage(response, 'bot');
+                }, 1000);
+            }
+        });
+    }
     
     // ===== FORMULARIO DE HISTORIAS =====
     const storyForm = document.getElementById('storyForm');
     
-    storyForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('¡Gracias por compartir tu historia! 💕 Será revisada y publicada pronto.');
-        storyForm.reset();
-    });
+    if (storyForm) {
+        storyForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('¡Gracias por compartir tu historia! 💕 Será revisada y publicada pronto.');
+            storyForm.reset();
+        });
+    }
     
     // ===== BOTONES DE DESCARGA =====
     document.querySelectorAll('.btn-download, .btn-download-sm, .btn-download-big').forEach(btn => {
@@ -130,6 +143,56 @@ document.addEventListener('DOMContentLoaded', () => {
             alert(`📖 Artículo completo sobre "${cardTitle}" - Próximamente disponible`);
         });
     });
+    
+    // ===== CARRUSEL PUBLICITARIO =====
+    const carouselSlides = document.querySelectorAll('.carousel-slide');
+    const carouselDots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+    let carouselInterval;
+    
+    function showSlide(index) {
+        carouselSlides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (carouselDots[i]) {
+                carouselDots[i].classList.remove('active');
+            }
+        });
+        
+        if (carouselSlides[index]) {
+            carouselSlides[index].classList.add('active');
+        }
+        if (carouselDots[index]) {
+            carouselDots[index].classList.add('active');
+        }
+        currentSlide = index;
+    }
+    
+    function nextSlide() {
+        const nextIndex = (currentSlide + 1) % carouselSlides.length;
+        showSlide(nextIndex);
+    }
+    
+    function startCarousel() {
+        carouselInterval = setInterval(nextSlide, 4000); // Cambia cada 4 segundos
+    }
+    
+    function resetCarousel() {
+        clearInterval(carouselInterval);
+        startCarousel();
+    }
+    
+    // Click en los dots
+    carouselDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showSlide(index);
+            resetCarousel();
+        });
+    });
+    
+    // Iniciar carrusel automáticamente
+    if (carouselSlides.length > 0) {
+        startCarousel();
+    }
     
     // ===== ANIMACIÓN AL SCROLL =====
     const observerOptions = {
@@ -164,5 +227,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     console.log('🌸 Equilibrio Fem - Sitio cargado correctamente');
     console.log('💕 Proyecto de Diagramación - Universidad Santa María');
-    console.log('‍🎓 Jenny Aldana, Marianella Angarita, Mariangela Velasco');
+    console.log('👩‍🎓 Jenny Aldana, Marianella Angarita, Mariangela Velasco');
+    console.log('👨‍🏫 Docente: Edgar Cárdenas | 5to Semestre - Sección A');
 });
