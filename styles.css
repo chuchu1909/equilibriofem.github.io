@@ -1,6 +1,7 @@
 /* ============================================
-   EQUILIBRIO FEM - STYLES
+   EQUILIBRIO FEM - STYLES COMPLETO
    Paleta Pinkie: #FCBDD7, #EFA3C7, #FBDAE5, #96989A, #E0E0E0, #050505
+   Proyecto: Universidad Santa María - Diagramación
    ============================================ */
 
 /* VARIABLES */
@@ -36,7 +37,9 @@ body {
     overflow-x: hidden;
 }
 
-/* HEADER */
+/* ============================================
+   HEADER
+   ============================================ */
 .header {
     background: linear-gradient(135deg, var(--pink-light) 0%, var(--pink-medium) 100%);
     padding: 1rem 2rem;
@@ -107,39 +110,10 @@ body {
     cursor: pointer;
     color: var(--black);
 }
-/* HERO IMAGE */
-.hero-main-image {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 15px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 10px 40px rgba(239, 163, 199, 0.3);
-}
 
-.hero-text-overlay {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 1.5rem;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-}
-
-/* INFOGRAPHIC IMAGES */
-.infographic-img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 15px;
-    margin-bottom: 1rem;
-    box-shadow: 0 5px 20px rgba(239, 163, 199, 0.3);
-    transition: transform 0.3s ease;
-}
-
-.infographic-card:hover .infographic-img {
-    transform: scale(1.05) rotate(1deg);
-}
-/* HERO */
+/* ============================================
+   HERO SECTION (CON IMAGEN)
+   ============================================ */
 .hero {
     background: linear-gradient(135deg, var(--pink-light) 0%, var(--white) 100%);
     padding: 3rem 2rem;
@@ -163,44 +137,23 @@ body {
     overflow: hidden;
 }
 
-.illustration-girls {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    height: 250px;
-    align-items: flex-end;
+/* Imagen principal del Hero */
+.hero-main-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 40px rgba(239, 163, 199, 0.3);
 }
 
-.girl {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.girl-head {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-bottom: 0.5rem;
-}
-
-.girl-1 .girl-head { background: var(--pink-dark); }
-.girl-2 .girl-head { background: var(--gray-medium); }
-.girl-3 .girl-head { background: var(--pink-medium); }
-
-.girl-body {
-    width: 80px;
-    height: 120px;
-    border-radius: 40px 40px 0 0;
-}
-
-.girl-1 .girl-body { background: var(--pink-medium); }
-.girl-2 .girl-body { background: var(--gray-light); }
-.girl-3 .girl-body { background: var(--pink-dark); }
-
+/* Texto sobre el Hero */
 .hero-text-overlay {
     text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
 }
 
 .hero-text-overlay h1 {
@@ -215,6 +168,7 @@ body {
     font-size: 1.1rem;
 }
 
+/* Espacio publicitario */
 .ad-space {
     background: var(--gray-light);
     border-radius: 20px;
@@ -241,7 +195,9 @@ body {
     color: var(--pink-dark);
 }
 
-/* SECTIONS NAV */
+/* ============================================
+   NAVEGACIÓN DE SECCIONES
+   ============================================ */
 .sections-nav {
     padding: 3rem 2rem;
     background: var(--white);
@@ -284,7 +240,9 @@ body {
     font-size: 0.9rem;
 }
 
-/* CONTENT SECTIONS */
+/* ============================================
+   SECCIONES DE CONTENIDO (GENERAL)
+   ============================================ */
 .content-section {
     padding: 4rem 2rem;
 }
@@ -315,7 +273,9 @@ body {
     font-size: 1.1rem;
 }
 
-/* CONTENT GRID */
+/* ============================================
+   EXPLORA TU MENTE
+   ============================================ */
 .content-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -369,7 +329,9 @@ body {
     transform: scale(1.05);
 }
 
-/* WELLNESS GRID */
+/* ============================================
+   CUERPO Y BIENESTAR
+   ============================================ */
 .wellness-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -405,7 +367,9 @@ body {
     font-size: 0.95rem;
 }
 
-/* STORIES */
+/* ============================================
+   CUÉNTAMELO
+   ============================================ */
 .stories-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -447,7 +411,6 @@ body {
     font-style: italic;
 }
 
-/* SHARE FORM */
 .share-form {
     background: var(--white);
     padding: 2rem;
@@ -506,7 +469,9 @@ body {
     background: var(--black);
 }
 
-/* RESOURCES */
+/* ============================================
+   AQUÍ TE AYUDAMOS
+   ============================================ */
 .resources-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -558,7 +523,9 @@ body {
     background: var(--pink-dark);
 }
 
-/* CONTENT LAYOUT */
+/* ============================================
+   CONTENIDO + VIDEO
+   ============================================ */
 .content-layout {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -623,7 +590,9 @@ body {
     color: var(--pink-dark);
 }
 
-/* TEMPLATES */
+/* ============================================
+   JOURNALING
+   ============================================ */
 .templates-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -675,7 +644,9 @@ body {
     background: var(--black);
 }
 
-/* INFOGRAPHICS */
+/* ============================================
+   INFOGRAFÍAS (CON IMÁGENES)
+   ============================================ */
 .infographics-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -695,19 +666,22 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
+/* Imágenes de infografías */
 .infographic-img {
     width: 100%;
-    height: auto;
+    height: 250px;
+    object-fit: cover;
     border-radius: 15px;
     margin-bottom: 1rem;
-    box-shadow: 0 5px 20px rgba(239, 163, 199, 0.2);
+    box-shadow: 0 5px 20px rgba(239, 163, 199, 0.3);
     transition: transform 0.3s ease;
 }
 
 .infographic-card:hover .infographic-img {
-    transform: scale(1.02);
+    transform: scale(1.05) rotate(1deg);
 }
 
+/* Caja de información rosa */
 .infographic-info {
     background: var(--pink-light);
     padding: 1rem;
@@ -746,21 +720,9 @@ body {
     font-weight: bold;
 }
 
-.info-image {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-}
-
-.infographic-card h3 {
-    font-family: var(--font-title);
-    margin-bottom: 0.5rem;
-}
-
-.infographic-card p {
-    color: var(--gray-medium);
-}
-
-/* PLANNER */
+/* ============================================
+   PLANNER
+   ============================================ */
 .planner-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -840,7 +802,9 @@ body {
     font-weight: 600;
 }
 
-/* CHAT WIDGET */
+/* ============================================
+   CHAT WIDGET
+   ============================================ */
 .chat-widget {
     position: fixed;
     bottom: 2rem;
@@ -1009,7 +973,9 @@ body {
     background: var(--black);
 }
 
-/* FOOTER */
+/* ============================================
+   FOOTER
+   ============================================ */
 .footer {
     background: var(--black);
     color: var(--white);
@@ -1091,7 +1057,9 @@ body {
     font-style: italic;
 }
 
-/* RESPONSIVE */
+/* ============================================
+   RESPONSIVE
+   ============================================ */
 @media (max-width: 968px) {
     .hero-container {
         grid-template-columns: 1fr;
@@ -1137,7 +1105,9 @@ body {
     }
 }
 
-/* ANIMATIONS */
+/* ============================================
+   ANIMACIONES
+   ============================================ */
 @keyframes fadeIn {
     from {
         opacity: 0;
