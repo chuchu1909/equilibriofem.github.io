@@ -1,4 +1,3 @@
-
 // ============================================
 // EQUILIBRIO FEM - JAVASCRIPT
 // ============================================
@@ -68,9 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
         'hola': '¡Hola! 💕 ¿Cómo te sientes hoy?',
         'ansiedad': 'Entiendo. La ansiedad es más común de lo que crees. Te recomiendo visitar nuestra sección "Explora tu mente" para aprender técnicas de respiración. 🌸',
         'triste': 'Lamento que te sientas así. Recuerda que está bien no estar bien. ¿Quieres que te comparta algunas líneas de ayuda? 💚',
-        'ayuda': 'Claro! En "Aquí te ayudamos" encontrarás recursos descargables y contactos de profesionales. 🤝',
+        'ayuda': 'Claro! En "Aquí te ayudamos" encontrarás recursos descargables y contactos de profesionales. ',
         'gracias': '¡De nada! Estamos aquí para ti siempre. 💕',
-        'default': 'Gracias por escribirnos. Una de nosotras te responderá pronto. Mientras tanto, explora nuestras secciones. 🌸'
+        'default': 'Gracias por escribirnos. Una de nosotras te responderá pronto. Mientras tanto, explora nuestras secciones. '
     };
     
     function getBotResponse(message) {
@@ -119,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.btn-download, .btn-download-sm, .btn-download-big').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            alert(' La descarga comenzará pronto. ¡Gracias por tu interés!');
+            alert('🌸 La descarga comenzará pronto. ¡Gracias por tu interés!');
         });
     });
     
@@ -164,4 +163,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     console.log('🌸 Equilibrio Fem - Sitio cargado correctamente');
+    console.log('💕 Proyecto de Diagramación - Universidad Santa María');
+    console.log('‍🎓 Jenny Aldana, Marianella Angarita, Mariangela Velasco');
 });
