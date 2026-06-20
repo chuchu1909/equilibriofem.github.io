@@ -47,8 +47,21 @@
             </div>
             <div class="ad-space">
                 <span class="ad-label">Espacio publicitario</span>
-                <div class="ad-content">
-                    <p>🌸 Tu marca aquí 🌸</p>
+                <div class="carousel-container" id="adCarousel">
+                    <div class="carousel-slide active">
+                        <img src="https://i.imgur.com/qWGqINA.jpg" alt="Publicidad 1">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://i.imgur.com/OI7QrYj.jpg" alt="Publicidad 2">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://i.imgur.com/0WAGNH9.jpg" alt="Publicidad 3">
+                    </div>
+                </div>
+                <div class="carousel-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
                 </div>
             </div>
         </div>
@@ -189,7 +202,7 @@
             <div class="share-form">
                 <h3>Comparte tu historia ✨</h3>
                 <form id="storyForm">
-                    <input type="text" placeholder="Tu nombre (o alias)" required>
+                    <input type="text" placeholder="Tu nombre (o alias) - Opcional">
                     <input type="number" placeholder="Tu edad" min="12" max="25" required>
                     <textarea placeholder="Cuéntanos tu experiencia..." required></textarea>
                     <button type="submit" class="btn-submit">Enviar historia</button>
@@ -298,68 +311,69 @@
         </div>
     </section>
 
-<!-- INFOGRAFÍAS -->
-<section class="content-section" id="infografias">
-    <div class="section-container">
-        <div class="section-header">
-            <h2>📊 Infografías educativas</h2>
-            <p class="section-subtitle">Aprende visualmente sobre salud mental</p>
-        </div>
-        <div class="infographics-grid">
-            <!-- Infografía 1: Ciclo de la Ansiedad -->
-            <div class="infographic-card">
-                <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=400&h=300&fit=crop" 
-                     alt="Mujer joven pensativa reflexionando" 
-                     class="infographic-img">
-                <h3>Ciclo de la ansiedad</h3>
-                <p>Entiende cómo funciona y cómo romper el ciclo.</p>
-                <div class="infographic-info">
-                    <p><strong>¿Qué es?</strong> La ansiedad funciona como un círculo: un pensamiento negativo genera un síntoma físico, que te lleva a evitar la situación, dándote un alivio temporal... pero el ciclo vuelve a empezar.</p>
-                    <p><strong>💡 Tip:</strong> Identificar en qué paso estás te ayuda a romper el patrón. ¡Puedes salir del ciclo!</p>
-                </div>
-                <button class="btn-download-sm"><i class="fas fa-download"></i> Descargar</button>
+    <!-- INFOGRAFÍAS -->
+    <section class="content-section" id="infografias">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>📊 Infografías educativas</h2>
+                <p class="section-subtitle">Aprende visualmente sobre salud mental</p>
             </div>
+            <div class="infographics-grid">
+                <!-- Infografía 1: Ciclo de la Ansiedad -->
+                <div class="infographic-card">
+                    <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=400&h=300&fit=crop" 
+                         alt="Mujer joven pensativa reflexionando" 
+                         class="infographic-img">
+                    <h3>Ciclo de la ansiedad</h3>
+                    <p>Entiende cómo funciona y cómo romper el ciclo.</p>
+                    <div class="infographic-info">
+                        <p><strong>¿Qué es?</strong> La ansiedad funciona como un círculo: un pensamiento negativo genera un síntoma físico, que te lleva a evitar la situación, dándote un alivio temporal... pero el ciclo vuelve a empezar.</p>
+                        <p><strong>💡 Tip:</strong> Identificar en qué paso estás te ayuda a romper el patrón. ¡Puedes salir del ciclo!</p>
+                    </div>
+                    <button class="btn-download-sm"><i class="fas fa-download"></i> Descargar</button>
+                </div>
 
-            <!-- Infografía 2: Técnicas de Respiración -->
-            <div class="infographic-card">
-                <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=400&h=300&fit=crop" 
-                     alt="Técnicas de respiración - meditación" 
-                     class="infographic-img">
-                <h3>Técnicas de respiración</h3>
-                <p>4 métodos para calmarte en minutos.</p>
-                <div class="infographic-info">
-                    <p><strong>1. 4-7-8:</strong> Inhala 4s, mantén 7s, exhala 8s. Ideal para dormir.</p>
-                    <p><strong>2. Diafragmática:</strong> Respira desde el vientre, no el pecho.</p>
-                    <p><strong>3. Cuadrada:</strong> 4s en cada fase. Perfecta para concentrarte.</p>
-                    <p><strong>4. Suspiro fisiológico:</strong> 2 inhalaciones rápidas + 1 exhalación larga.</p>
+                <!-- Infografía 2: Técnicas de Respiración -->
+                <div class="infographic-card">
+                    <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=400&h=300&fit=crop" 
+                         alt="Técnicas de respiración - meditación" 
+                         class="infographic-img">
+                    <h3>Técnicas de respiración</h3>
+                    <p>4 métodos para calmarte en minutos.</p>
+                    <div class="infographic-info">
+                        <p><strong>1. 4-7-8:</strong> Inhala 4s, mantén 7s, exhala 8s. Ideal para dormir.</p>
+                        <p><strong>2. Diafragmática:</strong> Respira desde el vientre, no el pecho.</p>
+                        <p><strong>3. Cuadrada:</strong> 4s en cada fase. Perfecta para concentrarte.</p>
+                        <p><strong>4. Suspiro fisiológico:</strong> 2 inhalaciones rápidas + 1 exhalación larga.</p>
+                    </div>
+                    <button class="btn-download-sm"><i class="fas fa-download"></i> Descargar</button>
                 </div>
-                <button class="btn-download-sm"><i class="fas fa-download"></i> Descargar</button>
-            </div>
 
-            <!-- Infografía 3: Señales de Alerta -->
-            <div class="infographic-card">
-                <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=400&h=300&fit=crop" 
-                     alt="Persona preocupada - salud mental" 
-                     class="infographic-img">
-                <h3>Señales de alerta</h3>
-                <p>Cuándo buscar ayuda profesional.</p>
-                <div class="infographic-info">
-                    <p><strong>⚠️ Presta atención si notas:</strong></p>
-                    <ul>
-                        <li>Aislamiento social constante</li>
-                        <li>Cambios extremos de humor</li>
-                        <li>Alteraciones del sueño</li>
-                        <li>Pérdida de interés en todo</li>
-                        <li>Pensamientos negativos persistentes</li>
-                        <li>Cambios bruscos en el apetito</li>
-                    </ul>
-                    <p><strong>❤️ Importante:</strong> Si identificas 2 o más señales, busca ayuda profesional. No estás sola.</p>
+                <!-- Infografía 3: Señales de Alerta -->
+                <div class="infographic-card">
+                    <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=400&h=300&fit=crop" 
+                         alt="Persona preocupada - salud mental" 
+                         class="infographic-img">
+                    <h3>Señales de alerta</h3>
+                    <p>Cuándo buscar ayuda profesional.</p>
+                    <div class="infographic-info">
+                        <p><strong>⚠️ Presta atención si notas:</strong></p>
+                        <ul>
+                            <li>Aislamiento social constante</li>
+                            <li>Cambios extremos de humor</li>
+                            <li>Alteraciones del sueño</li>
+                            <li>Pérdida de interés en todo</li>
+                            <li>Pensamientos negativos persistentes</li>
+                            <li>Cambios bruscos en el apetito</li>
+                        </ul>
+                        <p><strong>❤️ Importante:</strong> Si identificas 2 o más señales, busca ayuda profesional. No estás sola.</p>
+                    </div>
+                    <button class="btn-download-sm"><i class="fas fa-download"></i> Descargar</button>
                 </div>
-                <button class="btn-download-sm"><i class="fas fa-download"></i> Descargar</button>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
     <!-- PLANNER -->
     <section class="content-section alt-bg" id="planner">
         <div class="section-container">
